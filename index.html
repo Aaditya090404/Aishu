@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secret Book</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN CARD */
+#login {
+  background: #ffffffcc;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.2s ease;
+}
+
+#login h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #b30059;
+}
+
+input {
+  width: 85%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  margin-top: 10px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 17px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: #ff4d88;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: 0.4s;
+}
+
+button:hover {
+  background: #e6005c;
+  transform: scale(1.05);
+}
+
+/* BOOK */
+#book {
+  display: none;
+  width: 90%;
+  max-width: 550px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  animation: fadeIn 1s ease;
+}
+
+.book-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #a80050;
+}
+
+/* PAGE */
+.page {
+  display: none;
+  background: #fff7fa;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 15px rgba(255,182,193,0.6);
+  min-height: 220px;
+  font-size: 18px;
+  line-height: 1.6;
+  animation: flip 0.7s ease;
+  white-space: pre-line;
+}
+
+@keyframes flip {
+  from { transform: rotateY(-90deg); opacity: 0; }
+  to { transform: rotateY(0); opacity: 1; }
+}
+
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons button {
+  width: 45%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN SECTION -->
+<div id="login">
+  <h2>🔐 Enter Password</h2>
+  <input type="password" id="pw" placeholder="Enter password">
+  <button onclick="checkPW()">Open Book 📖</button>
+  <p id="err" style="color:red; margin-top:15px;"></p>
+  <div style="margin-top:18px;font-size:13px;color:#444">The Name I Called You and DD/MM, starting letter will be Capital.</div>
+</div>
+
+
+<!-- BOOK SECTION -->
+<div id="book">
+  <div class="book-title">I'm Literally Really Very Sorry!!</div>
+
+  <!-- EACH PAGE -->
+  <div class="page" id="p1">
+   Hiii madam!!<br><br>
+    Sarvaat agodr tr thankyuhh for being my friend!!
+    Shunnya tun samrajya bnvayca mjha prawas aaj me ithch thambvtoi.!<br>
+    Tumchya kde mala kdhich konti shikayat nvti, nahiye. Nahi rahnr!
+    Tumhi sarvaat best ahat, mst ahat. Cute ahat!!!<br>
+    Pan madam aaj mala ithch thmbv laagnr ahe so please really very sorry!
+  </div>
+
+  <div class="page" id="p2">
+    Tumchi kahich chuki nahiye, <br>
+    Actually mjhech karma mjhya kaana khali vaajvat ahet! <br>
+    Please tumhala request ahe madam! <br>
+    Please tumhi mala kdhi vait naka samju, nahiye me ts! Fakt aayuhyt vait paristhiti chalu ahe mahnun srv kahi krav laagt ahe!
+    Tumchya sobt je kahi time spend kela! Promise always te special hotach! And te nahi kdhi visrnr!
+  </div>
+
+  <div class="page" id="p3">
+    Khra saangt ahe, hya sathi maaf pn kara, apla jevhaa he vc chlayca, tevhaa me ss suddha ghetlel hote tumche and mjhe wle
+    Pn te suddha delete krnr ahe me promise sorry for this!!!<br>
+    Me tumhala UNFRIEND krnr ahe! <br>
+    Tumcha number suddha hota mjhya kde Saved as Aishuuu❤<br>
+    Te suddha number delete krnr ahe!
+  </div>
+
+  <div class="page" id="p4">
+    Tumchya shi kahi ch shikayat nahiye oh!!! <br>
+     Pan mala aatun ch vatat ahe me mjhya Raani, mjhya Baatuk laa gamvel! <br>
+     Try kela prayatna kela doghanna sobt gheun chalel! Pn mala mhiti ahe! <br>
+     Sobt nahich kadhich! <br>
+     Mala mjhya baatuk laa dur nahi krvaycay mjhya psna! Mahnun Please literally very sorry!
+  </div>
+
+  <div class="page" id="p5">
+    Tumhi matured ahat mothe ahat! <br>
+    I hope soo mala samjun ghyl mala!! <br>
+    Yuh always will my good friend!! <br>
+    Special shabd nahi vaapnr, vaad honr ugach! Good friend!!! <br>
+    Thankyou! <br>
+    जयभीम🙏 Namo Budday!!
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="nav-buttons">
+    <button onclick="prevPage()">⬅ Previous</button>
+    <button onclick="nextPage()">Next ➡</button>
+  </div>
+</div>
+
+<script>
+let page = 1;
+let totalPages = 8;
+
+function checkPW(){
+  let pw = document.getElementById("pw").value;
+  if(pw === "Aishu2804"){
+    document.getElementById("login").style.display="none";
+    document.getElementById("book").style.display="block";
+    showPage();
+  } else {
+    document.getElementById("err").innerText="Incorrect password!";
+  }
+}
+
+function showPage(){
+  document.querySelectorAll(".page").forEach(p => p.style.display="none");
+  document.getElementById("p"+page).style.display="block";
+}
+
+function nextPage(){
+  if(page < totalPages){
+    page++;
+    showPage();
+  }
+}
+
+function prevPage(){
+  if(page > 1){
+    page--;
+    showPage();
+  }
+}
+</script>
+
+</body>
+</html>
